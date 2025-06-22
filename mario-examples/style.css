@@ -1,0 +1,212 @@
+/*// BASE STYLES //*/
+
+html, body{
+  height: 100%;
+  width:100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.grass, .sky, .road{
+  position: relative;
+}
+
+.sky{
+  height: 40%;
+  background: skyblue;
+}
+
+.grass{
+  height: 30%;
+  background: seagreen;
+}
+
+.road{
+  height: 30%;
+  background: dimgrey;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+}
+
+.lines{
+  box-sizing: border-box;
+  border: 5px dashed #fff;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+}
+
+
+
+/*// ELEMENTS TO ANIMATE //*/
+
+.mario{
+  transform: scale(0.7);
+  margin-top: -100px;
+ padding-left: 25px;
+ animation: driveMario 5s linear infinite;
+ animation-timing-function: ease-in;
+ 
+}
+
+.luigi{
+    transform: scale(0.9);
+    margin-bottom: -80px;
+   padding-left: 10px;
+   animation: driveMario 4s linear infinite;
+   animation-delay: 1s;
+   animation-fill-mode: backwards;
+   animation-timing-function: ease-out;
+   
+  }
+  .cloud{
+    position: absolute;
+    animation: clouds 10s linear infinite;
+  }
+
+  .cloud:nth-child(1){
+    width: 70px;
+    height: 70px;
+    top: 120px;
+    opacity: 80%;
+    animation-delay: 1s;
+    animation-direction: reverse;
+    }
+
+    .cloud:nth-child(2){
+      opacity: 100%;
+      width: 100px;
+      animation-delay: 2s;
+    }
+
+    .cloud:nth-child(3){
+    top: 180px;
+    left: 100px;
+    height: 100px;
+    animation-duration: 3s;
+    opacity: 90%;}
+
+    .cloud:nth-child(5){
+      top: 50px;
+      left: 200px;
+      width: 150px;
+      height: 150px;
+      opacity: 70%;
+      animation-duration: 4s;
+    }
+    .cloud:nth-child(6){
+      top: 80px;
+      left: 300px;
+      width: 200px;
+      height: 200px;
+      opacity: 80%;
+      animation-direction:5s;
+      
+    }
+    .cloud:nth-child(7){
+      top: 10px;
+      left: 400px;
+      width: 250px;
+      height: 250px;
+      
+    }
+    .cloud:nth-child(8){
+      top: -10px;
+      left: 600px;
+      width: 300px;
+      height: 300px;
+      
+    }
+
+    .cloud:nth-child(9){
+      top: 50px;
+      left: 800px;
+      width: 150px;
+      height: 150px;
+      opacity: 70%;
+    }
+    .cloud:nth-child(10){
+      top: 80px;
+      left: 900px;
+      width: 200px;
+      height: 200px;
+      opacity: 80%;
+      
+    }
+    .cloud:nth-child(11){
+      top: 10px;
+      left: 1000px;
+      width: 250px;
+      height: 250px;
+      animation-direction: reverse;
+      
+    }
+    .cloud:nth-child(12){
+      top: -10px;
+      left: 1200px;
+      width: 300px;
+      height: 300px;
+      animation-direction: reverse;
+      
+    }
+    
+    
+
+  
+
+  
+
+
+
+
+/*// KEYFRAMES //*/
+@keyframes driveMario{
+  from{
+    transform: translateX(-15vw);
+  }
+
+  to{
+    transform: translateX(100vw);
+   
+  }
+}
+
+@keyframes clouds{
+from {
+  transform: translateY(0px) translateX(0px);
+  
+  opacity: 100%;
+}
+
+to{
+
+  transform: translateY(100px) translateX(200px);
+
+}
+}
+
+
+
+
+  
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
